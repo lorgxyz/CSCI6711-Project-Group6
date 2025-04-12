@@ -22,17 +22,17 @@ Jupyter notebook files are intended to be run with Google CoLab. They will funct
 NSGA2 implementation required too much RAM for Google CoLab free version, so it is provided in .py format. At least 16GB of RAM is recommended to run this file.
 
 To run the Snort experiments on a linux machine, first install snort with:
-sudo apt install snort
+```sudo apt install snort```
 
 Then create a dummy local interface and assign it an ip address with the following comands:
-sudo ip link add dummy0 type dummy
+```sudo ip link add dummy0 type dummy
 sudo ip addr add 192.168.1.1/24 dev dummy0
-sudo ip link set dummy0 up
+sudo ip link set dummy0 up```
 
 Run Snort on the interface:
-sudo snort -i dummy0 -c /etc/snort/snort.conf
+```sudo snort -i dummy0 -c /etc/snort/snort.conf```
 
 Then replay the PCAP files on the interface:
-sudo tcpreplay --intf1=dummy0 your_capture.pcap
+```sudo tcpreplay --intf1=dummy0 your_capture.pcap```
 
 
