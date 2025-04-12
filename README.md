@@ -25,9 +25,9 @@ To run the Snort experiments on a linux machine, first install snort with:
 ```sudo apt install snort```
 
 Then create a dummy local interface and assign it an ip address with the following comands:
-```sudo ip link add dummy0 type dummy
-sudo ip addr add 192.168.1.1/24 dev dummy0
-sudo ip link set dummy0 up```
+```sudo ip link add dummy0 type dummy```
+```sudo ip addr add 192.168.1.1/24 dev dummy0```
+```sudo ip link set dummy0 up```
 
 Run Snort on the interface:
 ```sudo snort -i dummy0 -c /etc/snort/snort.conf```
